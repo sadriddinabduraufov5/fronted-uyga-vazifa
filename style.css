@@ -1,205 +1,250 @@
-*{
+/* Umumiy sozlamalar */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.navbar {
+body {
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Kichik va katta sarlavhalar uchun umumiy uslub */
+.kichik-sarlavha {
+    color: rgb(95, 178, 231); 
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.katta-sarlavha {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Navigatsiya */
+.bosh-qism {
+    background-color: aqua;
+}
+
+.navigatsiya {
     display: flex;
     justify-content: space-between;
-    background-color: aqua;
-    align-items: baseline;
+    align-items: center;
+    padding: 20px;
     font-weight: bold;
     font-size: 20px;
 }
-.logo {
- margin-left: 40px;
-}
-.navigation {
-    margin-right: 40px;
-}
 
-.navigation ul {
-   display: flex; 
+.menyu {
+    display: flex; 
     list-style: none;
 }
-.navigation li {
-    margin-left: 20px;
-    padding: 15px 20px;
-}
-.navigation li:hover {
-    background-color: red;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.navigation a {
-    text-decoration: none;
+
+.menyu li {
+    margin-left: 10px;
 }
 
-.main {
+.menyu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+
+.menyu a:hover {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Asosiy ekran (Hero section) */
+.asosiy-ekran {
     background-image: url('background1.jpg');
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
+    text-align: center;
 }
-.main__about  button {
-    padding: 20px 50px;
-    margin-top: 20px;
+
+.asosiy-ekran__matn h1 {
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.asosiy-ekran__matn p {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.asosiy-tugma {
+    padding: 15px 40px;
+    margin-top: 30px;
     background-color: rgb(50, 50, 230);
     color: white;
+    border: none;
     border-radius: 30px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-.main__about p {
-    font-size: 20px;
-    margin-top: 20px;
+
+.asosiy-tugma:hover {
+    background-color: rgb(30, 30, 200);
 }
-.subjectCategory{
+
+/* Toifalar */
+.toifalar {
     text-align: center;
-    margin-top: 20px;
-    width: 1000px;
-    margin: 0 auto;
 }
-.subjectCategory h3{
-    color:rgb(95, 178, 231); 
-    font-size: 15px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-.subjectCategory h2{
-    margin-bottom: 15px;
-    margin-top: 10px;
-}
-.cards{
+
+.kartochkalar-to'plami {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.card{
-    width: 30%;
-    background-color: rgb(95, 178, 231);
-    margin-bottom: 20px;
-    border-radius: 20px;
-    padding: 20px 0px;
-}
-.about{
-    display: flex;
-    justify-content: space-between;
-    width: 1000px;
-    margin: 0 auto;
-}
-.about__text{
-    max-width: 400px;
-    left: 50px;
-}
-.about__text h1{
-    font-size: 20px;
-    margin-bottom: 15px;
-    left: 50px;
-}
-.about__text p{
-    color: #666;
-
-}
-.about__img{
-    display: flex;
     gap: 20px;
+}
 
-}
-.about__card1{
-    background: #fff;
-    text-align: center;
-    padding: 20px;
+.kartochka {
+    width: calc(33.333% - 20px);
+    background-color: rgb(95, 178, 231);
     border-radius: 20px;
-    width: 150px;
-    background-color: yellow;
+    padding: 30px 20px;
+    color: white;
+    transition: transform 0.3s;
+    cursor: pointer;
 }
-.about__card2{
-        text-align: center;
-    padding: 20px;
-    border-radius: 20px;
-    width: 150px;
-    background-color: red;
+
+.kartochka:hover {
+    transform: translateY(-5px);
 }
-.about__card3{
-        text-align: center;
-    padding: 20px;
-    border-radius: 20px;
-    width: 150px;
-    background-color: #dab8a3;
-}
-.p{
-    color: aqua;
-    text-align: center;
+
+/* Biz haqimizda */
+.biz-haqimizda {
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
-.cources{
-    width: 1000px;
-    margin: 0 auto;
-    text-align: center;
 
+.biz-haqimizda__matn {
+    flex: 1;
 }
-.courses__cards{
+
+.biz-haqimizda__matn h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.matn-mazmuni {
+    color: #666;
+    line-height: 1.6;
+}
+
+.biz-haqimizda__statistika {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.statistika-kartochkasi {
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 20px;
+    flex: 1;
+}
+
+/* Haqiqiy dasturchilar ranglarni kodni ko'paytirmasdan shunday berishadi */
+.statistika-kartochkasi:nth-child(1) { background-color: yellow; }
+.statistika-kartochkasi:nth-child(2) { background-color: red; color: white; }
+.statistika-kartochkasi:nth-child(3) { background-color: #dab8a3; }
+
+/* Kurslar */
+.kurslar {
+    text-align: center;
+}
+
+.kurslar-to'plami {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
 }
-.cource{
-    margin-bottom: 20px;
+
+.kurs-kartochkasi {
+    width: calc(33.333% - 20px);
     background-color: aqua;
-    width: 30%;
     border-radius: 10px;
     padding: 20px;
+    transition: transform 0.3s;
+    cursor: pointer;
 }
-.cources button{
+
+.kurs-kartochkasi:hover {
+    transform: scale(1.05);
+}
+
+.barcha-kurslar-tugmasi {
     background-color: aqua;
-    padding: 15px 40px;
-    border-radius: 50px 0 50px 0 ;
-    font-size: 20px;
-    font-weight: bold;
-
+    color: #333;
+    border-radius: 50px 0 50px 0;
 }
 
-.container{
+.barcha-kurslar-tugmasi:hover {
+    background-color: #00cccc;
+    color: white;
+}
+
+/* Aloqa */
+.aloqa {
     display: flex;
     justify-content: space-between;
-    
+    gap: 20px;
 }
-.info{
-    margin: 20px;
+
+.aloqa-kartochkasi {
+    flex: 1;
+    background: white;
+    padding: 30px 20px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.info-link {
-    text-decoration: none; 
-    color: inherit;       
-    display: block;      
-    transition: 0.3s;
+.aloqa-kartochkasi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-.info-link:hover {
-    opacity: 0.8;        
+.aloqa-kartochkasi:active {
+    transform: scale(0.98);
 }
 
-.card {
-    cursor: pointer;      
-    transition: transform 0.2s;
+.aloqa-kartochkasi h4 {
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.card:active {
-    transform: scale(0.95);
-}
-
-
-.info h4 i, .info p i {
-    margin-right: 10px;
+.aloqa-kartochkasi i {
+    color: rgb(50, 50, 230);
+    margin-right: 8px;
 }
